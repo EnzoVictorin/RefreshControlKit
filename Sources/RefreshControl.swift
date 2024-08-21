@@ -183,7 +183,7 @@ public class RefreshControl: UIControl {
         let recognizer = UIPanGestureRecognizer(target: self, action: #selector(viewPanned))
         
         if #available(iOS 13.4, *) {
-            recognizer.allowedScrollTypesMask = .all
+            recognizer.allowedScrollTypesMask = scrollView.panGestureRecognizer.allowedScrollTypesMask
         }
         
         recognizer.delegate = self
